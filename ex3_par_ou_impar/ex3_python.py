@@ -1,5 +1,6 @@
 def main():
     #! Variable Declaration + Input
+    num = int(0)
     num = int(input("Insert a number here: "))
 
     #! Data Processment + Output
