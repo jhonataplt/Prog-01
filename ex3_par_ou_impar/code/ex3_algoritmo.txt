@@ -1,0 +1,11 @@
+ALGORITMO
+    
+    ESCREVA "Insert a number here: "
+    LEIA num
+
+    SE o resto de (num / 2) for diferente de 0 ENTÃO
+        ESCREVA (num, " IMPAR")
+    SENÃO
+        ESCREVA (num, " PAR")
+
+FIM DO ALGORITMO
