@@ -1,6 +1,3 @@
-from re import M
-
-
 def main():
 
     #! Variable Declaration
