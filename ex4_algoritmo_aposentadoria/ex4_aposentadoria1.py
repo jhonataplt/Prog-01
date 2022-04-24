@@ -1,35 +1,35 @@
 def main():
 
     #! Variable Declaration
-    idade = int(0);
-    tpo_contr = int(0);
-    soma = int(0);
-    sexo = str ('');
+    age = int(0);
+    contribution = int(0);
+    sum = int(0);
+    genre = str ('');
 
     #! Input
-    sexo = (input("Insert your genre here: "));
-    idade = int(input("Insert your age here: "));
-    tpo_contr = int(input("Insert your contribution time here: "));
-    soma = idade + tpo_contr;
+    genre = (input("Insert you genre: "));
+    age = int(input("Insert your age: "));
+    contribution = int(input("Insert your contribution time: "));
+    sum = age + contribution;
 
     #! Processment
-    if sexo == 'm':
-        if idade >= 65:
-            if tpo_contr >= 15:
-                if soma >= 95:
-                    print('Pode aposentar');
-                else: print("Não pode aposentar");
-            else: print("Não pode aposentar");
-        else: print("Não pode aposentar");
+    if genre == 'm':
+        if age >= 65:
+            if contribution >= 15:
+                if sum >= 95:
+                    print('Can retiree');
+                else: print("Can't retiree");
+            else: print("Can't retiree");
+        else: print("Can't retiree");
 
-    if sexo == 'f':
-        if idade >= 60:
-            if tpo_contr >= 15:
-                if soma >= 85:
-                    print('Pode aposentar');
-                else: print("Não pode aposentar");
-            else: print("Não pode aposentar");
-        else: print("Não pode aposentar");
+    if genre == 'f':
+        if age >= 60:
+            if contribution >= 15:
+                if sum >= 85:
+                    print('Can retiree');
+                else: print("Can't retiree");
+            else: print("Can't retiree");
+        else: print("Can't retiree");
 
     #! End
 
