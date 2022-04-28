@@ -5,7 +5,6 @@ def main():
     b = int (0);
     c = int (0);
     maior = int (0);
-    output = str("");
 
     #! Input
     a = int(input());
@@ -16,18 +15,15 @@ def main():
     if a > b:
         if a > c:
             maior = a;
-        else:
-            maior = c;
+        else: maior = c;          
     else:
         if b > c:
             maior = b;
-        else:
-            maior = c;
+        else: maior = c;   
 
     while a != 0 or b != 0 or c != 0:
         
-        update = (f"MAIOR ({a}, {b}, {c}) = {maior}\n");
-        output += update;
+        print(f"MAIOR ({a}, {b}, {c}) = {maior}\n");
         
         #! Input
         a = int(input());
@@ -38,18 +34,12 @@ def main():
         if a > b:
             if a > c:
                 maior = a;
-            else:
-               maior = c;
+            else: maior = c;
         else:
             if b > c:
                 maior = b;
-            else:
-                maior = c;
+            else: maior = c;
                 
-    #! Input
-    print (output);
-
-
 if __name__ == "__main__":
     main()
 #! End
