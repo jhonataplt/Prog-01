@@ -18,8 +18,8 @@ def main():
    
     #! Inicialização de Variáveis
     n = int(input())
-    maiorperc = -1;
-    menorperc = 101;
+    maiorperc = -1
+    menorperc = 101
     
     #! Entrada de dados + Processamento
     for i in range(n):
