@@ -1,26 +1,23 @@
-//! Import Libraries
 import java.util.Scanner;
 
 public class ex3_java {
 	public static void main(String[] args) {
 
-		// ! Variable Declaration
-		try (Scanner input = new Scanner(System.in)) {
-			int num;
+		int num;
+		Scanner input = new Scanner(System.in);
+		input.close();
 
-			// ! Input
-			System.out.print("Insert a number here: ");
-			num = input.nextInt();
+		System.out.print("Insira um número: ");
+		num = input.nextInt();
+		
+		int result = num % 2;
 
-			// ! Data Processment + Output
-			int result = num % 2;
-
-			if (result != 0) {
-				System.out.println(num + " IMPAR");
-			} else {
-				System.out.println(num + " PAR");
-			}
+		if (result != 0) {
+			System.out.println(num + " IMPAR");
+		} else {
+			System.out.println(num + " PAR");
 		}
+		
 	}
 }
 // ! End
