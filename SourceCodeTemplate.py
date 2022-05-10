@@ -12,7 +12,7 @@
 #  Aqui você pode usar o enunciado do problema proposto.
 
 # Definição do programa principal ou função principal
-def main():
+#! def main():
 	#Declaração de variáveis
 
 	#Entrada de dados
@@ -21,6 +21,6 @@ def main():
 
 	#Saída
 
-# Invocação(execução) do programa principal ou da função principal
-if __name__ == "__main__":
-	main()
+	# Invocação(execução) do programa principal ou da função principal
+#! if __name__ == "__main__":
+#!	  main()
