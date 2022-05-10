@@ -5,7 +5,6 @@ public class ex3_java {
 
 		int num;
 		Scanner input = new Scanner(System.in);
-		input.close();
 
 		System.out.print("Insira um número: ");
 		num = input.nextInt();
@@ -17,7 +16,7 @@ public class ex3_java {
 		} else {
 			System.out.println(num + " PAR");
 		}
-		
+		input.close();
 	}
 }
 // ! End
