@@ -1,15 +1,20 @@
+# Faça um programa em Python3 que leia dois números inteiros 
+# quaisquer. Calcule a divisão inteira do primeiro pelo segundo 
+# sem utilizar os operadores aritméticos /, // ou % em nenhuma 
+# parte de seu código.
+
 def main():
 
-    #! Variable Declaration
+    # Declaração de variáveis
     num = int(0)
     div = int(0)
     result = int(0)
 
-    #! Input
+    # Entrada
     num = int(input())
     div = int(input())
 
-    #! Processment + Output
+    # Processamento + Saída
     if num > 0 and div > 0:
         while num >= div:
             num -= div
@@ -18,7 +23,5 @@ def main():
     else:
         print("ENTRADA INVALIDA")
 
-
 if __name__ == "__main__":
     main()
-#! End

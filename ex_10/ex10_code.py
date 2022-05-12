@@ -1,6 +1,11 @@
+# Resolva o exercício 1.12.18 Livro Farrer - página 81. Para o 
+# caso de empate na pontuação total entre duas ou mais equipes, 
+# considere como vencedora a primeira equipe lida na entrada de 
+# dados.
+
 def main():
     
-    #! Variable Declaration
+    # Declaração de variáveis
     tp1 = float(0.0)
     tp2 = float(0.0)
     tp3 = float(0.0)
@@ -14,17 +19,17 @@ def main():
     pt2 = float(0.0)
     pt3 = float(0.0)
     pt = float(0.0)
-    ptvenc = float(0.0)
+    ptVenc = float(0.0)
     nins = int(0)
-    ninsvenc = int(0)
-    inscount = int(0)
+    ninsVenc = int(0)
+    insCount = int(0)
 
     #! Input
     tp1 = float(input())
     tp2 = float(input())
     tp3 = float(input())
     nins = int(input())
-    ptvenc = -1000
+    ptVenc = -1000
 
     #! Processment
     while nins != 9999:
@@ -61,18 +66,18 @@ def main():
         
         pt = pt1 + pt2 + pt3
 
-        if pt > ptvenc:
-            ptvenc = pt
-            ninsvenc = nins
+        if pt > ptVenc:
+            ptVenc = pt
+            ninsVenc = nins
         
         print(f'EQUIPE={nins} P1={pt1:.2f} P2={pt2:.2f} P3={pt3:.2f} PT={pt:.2f}')
 
         nins = int(input())
-        inscount += 1
+        insCount += 1
 
     #! Output
-    if inscount >= 1:
-        print(f'EQUIPE VENCEDORA={ninsvenc} PONTUACAO TOTAL={ptvenc:.2f}')
+    if insCount >= 1:
+        print(f'EQUIPE VENCEDORA={ninsVenc} PONTUACAO TOTAL={ptVenc:.2f}')
     else:
         print(f'SEM EQUIPES CADASTRADAS')
 

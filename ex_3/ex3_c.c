@@ -1,20 +1,21 @@
-/*
-! Import Libraries */
+/* Leia SOMENTE um número inteiro e imprima uma mensagem */
+/* contendo o número e um texto: PAR, se o número lido for */
+/* divisível por 2 ou exclusivo IMPAR, se o número lido não for */
+/* divisível por 2. */
+
 #include <stdio.h>
 #include <stdlib.h>
-/*
-! General Process */
+
 int main()
 {
-    /*
-    ! Variable Declaration */
+    /* Declaração de variáveis */
     int num;
-    /*
-    ! Input */
+    
+    /* Entrada */
     printf("Insert a number here: ");
     scanf("%d", &num);
-    /*
-    ! Data Processment + Output */
+    
+    /* Processamento + Saída */
     if (num % 2 != 0)
     {
         printf("%d IMPAR", num);
@@ -22,5 +23,3 @@ int main()
     else
         printf("%d PAR", num);
 }
-/*
-! End */

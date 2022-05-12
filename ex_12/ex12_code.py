@@ -1,57 +1,49 @@
-# -*- coding: utf-8 -*-
-#
-#  ex12_code.py
-#  
-#  Copyright 2022
-#  Jhonata Polito Demuner
-#  20221bsi0080
+# Faça um programa em Python 3 para resolver o seguinte
+# problema:Existem vários conjuntos de três valores reais 
+# quaisquer onde se deseja fazer uma estatística sobre geometria 
+# plana triangular. Cada conjunto de três valores reais lidos 
+# podem ou não representar os valores dos lados um triangulo, ou 
+# seja, os três valores reais lidos poderão ou não formar um 
+# triângulo. Processe estes conjuntos de três valores a fim de 
+# responder as perguntas a seguir e considere que os conjuntos de 
+# três valores encerram quando for fornecido um conjunto com os 
+# três valores reais iguais a zero.
 
-# Faça um programa em Python 3 para resolver o seguinte problema:
-# Existem vários conjuntos de três valores reais quaisquer onde se
-# deseja fazer uma estatística sobre geometria plana triangular.
-# Cada conjunto de três valores reais lidos podem ou não representar
-# os valores dos lados um triangulo, ou seja, os três valores reais
-# lidos poderão ou não formar um triângulo. Processe estes conjuntos
-# de três valores a fim de responder as perguntas a seguir e considere
-# que os conjuntos de três valores encerram quando for fornecido um
-# conjunto com os três valores reais iguais a zero.
-
-#! Definição do programa principal ou função principal
 def main():
 
-    #! Declaração de variáveis
+    # Declaração de variáveis
     lado1 = float (0.0)
     lado2 = float (0.0)
     lado3 = float (0.0)
     perimetro = float (0.0)
     semip = float (0.0)
     area = float (0.0)
-    equicount = int (0)
-    equiperimetro = float (0.0)
-    escacount = int (0)
-    escaperimetro = float (0.0)
-    isocount = int (0)
-    isoperimetro = float (0.0)
-    triangulocount = int (0)
-    naocount = int (0)
-    maiorarea = float (0.0)
-    ladomaior1 = float(0.0)
-    ladomaior2 = float (0.0)
-    ladomaior3 = float(0.0)
-    mediaequi = float (0.0)
-    mediaesca = float (0.0)
-    mediaiso = float (0.0)
-    perctriangulos = float (0.0)
-    percnaotriangulos = float(0.0)
+    equiCount = int (0)
+    equiPerimetro = float (0.0)
+    escaCount = int (0)
+    escaPerimetro = float (0.0)
+    isoCount = int (0)
+    isoPerimetro = float (0.0)
+    trianguloCount = int (0)
+    naoCount = int (0)
+    maiorArea = float (0.0)
+    ladoMaior1 = float(0.0)
+    ladoMaior2 = float (0.0)
+    ladoMaior3 = float(0.0)
+    mediaEqui = float (0.0)
+    mediaEsca = float (0.0)
+    mediaIso = float (0.0)
+    percTriangulos = float (0.0)
+    percNaoTriangulos = float(0.0)
 
-    maiorarea = -1
+    maiorArea = -1
 
-    #! Entrada de Dados
+    # Entrada
     lado1 = float(input())
     lado2 = float(input())
     lado3 = float(input())
 
-    #! Processamento
+    # Processamento
     if lado1 == 0 and lado2 == 0 and lado3 == 0:
         print('NAO HA DADOS PARA PROCESSAR')
     else:
@@ -63,52 +55,51 @@ def main():
 
                 if lado1 == lado2 and lado2 == lado3:
                     print (f'AREA = {area:.2f} PERIMETRO = {perimetro:.2f} TIPO = EQUILATERO')
-                    equicount += 1
-                    equiperimetro += perimetro
-                    triangulocount += 1
-                    mediaequi = equiperimetro / equicount
+                    equiCount += 1
+                    equiPerimetro += perimetro
+                    trianguloCount += 1
+                    mediaEqui = equiPerimetro / equiCount
 
                 elif lado1 != lado2 and lado1 != lado2 and lado3 != lado2:
                     print (f'AREA = {area:.2f} PERIMETRO = {perimetro:.2f} TIPO = ESCALENO ')
-                    escacount += 1
-                    escaperimetro += perimetro
-                    triangulocount += 1
-                    mediaesca = escaperimetro / escacount
+                    escaCount += 1
+                    escaPerimetro += perimetro
+                    trianguloCount += 1
+                    mediaEsca = escaPerimetro / escaCount
 
                 else:
                     print (f'AREA = {area:.2f} PERIMETRO = {perimetro:.2f} TIPO = ISOSCELES')
-                    isocount += 1
-                    isoperimetro += perimetro
-                    triangulocount += 1
-                    mediaiso = isoperimetro / isocount
+                    isoCount += 1
+                    isoPerimetro += perimetro
+                    trianguloCount += 1
+                    mediaIso = isoPerimetro / isoCount
 
             else:
                 print('NAO TRIANGULO ')
-                naocount += 1
+                naoCount += 1
 
-            if area > maiorarea:
-                maiorarea = area   
-                ladomaior1 = lado1
-                ladomaior2 = lado2
-                ladomaior3 = lado3
+            if area > maiorArea:
+                maiorArea = area   
+                ladoMaior1 = lado1
+                ladoMaior2 = lado2
+                ladoMaior3 = lado3
 
             lado1 = float(input())
             lado2 = float(input())
             lado3 = float(input())        
 
-        perctriangulos = triangulocount / (triangulocount + naocount) * 100
-        percnaotriangulos = naocount / (triangulocount + naocount) * 100
+        percTriangulos = trianguloCount / (trianguloCount + naoCount) * 100
+        percNaoTriangulos = naoCount / (trianguloCount + naoCount) * 100
 
-        #! Saída
+        # Saída
         if area != 0:
-            print(f'A maior area = {maiorarea:.2f} eh do triangulo: lado1 = {ladomaior1:.2f}, lado2 = {ladomaior2:.2f} e lado3 = {ladomaior3:.2f}')
-            print(f'{mediaequi:.2f} eh o perimetro medio dos triangulos equilateros')
-            print(f'{mediaiso:.2f} eh o perimetro medio dos triangulos isosceles')
-            print(f'{mediaesca:.2f} eh o perimetro medio dos triangulos escalenos')
+            print(f'A maior area = {maiorArea:.2f} eh do triangulo: lado1 = {ladoMaior1:.2f}, lado2 = {ladoMaior2:.2f} e lado3 = {ladoMaior3:.2f}')
+            print(f'{mediaEqui:.2f} eh o perimetro medio dos triangulos equilateros')
+            print(f'{mediaIso:.2f} eh o perimetro medio dos triangulos isosceles')
+            print(f'{mediaEsca:.2f} eh o perimetro medio dos triangulos escalenos')
 
-        print(f'Percentual de triangulos = {perctriangulos:.2f}')
-        print(f'Percentual de nao triangulos = {percnaotriangulos:.2f}')
+        print(f'Percentual de triangulos = {percTriangulos:.2f}')
+        print(f'Percentual de nao triangulos = {percNaoTriangulos:.2f}')
 
-#! Invocação(execução) do programa principal ou da função principal
 if __name__ == "__main__":
     main()

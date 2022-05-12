@@ -13,13 +13,13 @@
 
 # Definição do programa principal ou função principal
 #! def main():
-	#Declaração de variáveis
+	# Declaração de variáveis
 
-	#Entrada de dados
+	# Entrada de dados
 
-	#Processamento
+	# Processamento
 
-	#Saída
+	# Saída
 
 	# Invocação(execução) do programa principal ou da função principal
 #! if __name__ == "__main__":
