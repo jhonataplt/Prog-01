@@ -1,2 +1,2 @@
 # Prog-01
- I will use this repository to commit my exercises in Prog-01 disciplin.
+ Irei utilizar esse repositório para expor minhas atividades na disciplina de Programação I / IF - Espirito Santo.
