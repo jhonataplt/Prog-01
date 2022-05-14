@@ -2,13 +2,64 @@
 # (masculino, feminino) de 50 pessoas,
 # Fazer um algoritmo que calcule e escreva: a maior e a menor 
 # altura do grupo, a média de altura das mulheres e o número de 
-# homens.
+# homens
+# 
+# ALGORITMO
+#     DECLARE 
+#         menorAltura {MENOR ALTURA DO GRUPO}
+#         maiorAltura {MAIOR ALTURA DO GRUPO}
+#         altura {IDENTIFICAÇÃO DE ALTURA}
+#         mcount {NÚMERO DE HOMENS}
+#         fcount {NÚMERO DE MULHERES}
+#         faltura {SOMA DA ALTURA DE TODAS AS MULHERES}
+#         mediaAlturaMulheres {MÉDIA DE ALTURA DE TODAS AS MULHERES}
+#         NUMERICO
+#     DECLARE 
+#         sexo {IDENTIFICAÇÃO DE SEXO}
+#         LITERAL
+#     menorAltura ← 10000
+#     maiorAltura ← -1
+#     LEIA sexo
+#     SE sexo ≠ "m" OU sexo ≠ "f"
+#         ENTAO ESCREVA "NAO HÁ DADOS PARA PROCESSAR"
+#         SENAO
+#             REPITA
+#                 SE sexo = "m" OU sexo = "f"   
+#                     ENTAO
+#                         LEIA altura                       
+#                         SE altura > maiorAltura
+#                             ENTAO
+#                                 maiorAltura ← altura
+#                             SENÃO 
+#                                 SE altura < menorAltura
+#                                     menorAltura ← altura
+#                                 FIM SE
+#                         FIM SE          
+#                         SE sexo = "m"
+#                             ENTAO
+#                                 mcount ← mcount + 1
+#                             SENAO
+#                                 SE sexo = "f"
+#                                     fcount ← fcount + 1
+#                                     faltura ← faltura + altura
+#                                     mediaAlturaMulheres ← faltura / fcount
+#                                 FIM SE
+#                         FIM SE
+#                         LEIA sexo
+#                 FIM SE
+#             FIM REPITA
+#             ESCREVA maiorAltura, menorAltura
+#             ESCREVA mediaAlturaMulheres
+#             ESCREVA mcount
+# FIM ALGORITMO          
+            
 
 def main():
 
     # Declaração de variáveis
     menorAltura = int(0)
     maiorAltura = int(0)
+    quantpessoas = int(0)
     sexo = str ('')
     altura = int(0)
     mcount = int (0)
@@ -21,15 +72,18 @@ def main():
     maiorAltura = -1
 
     # Entrada
-    sexo = input()
+    quantpessoas = int(input())
 
     # Processamento
-    if sexo != 'm' and sexo != 'f' and sexo != 'M'and sexo != 'F':
+    if quantpessoas == 0:
         print('NAO HA DADOS PARA PROCESSAR')
     else: 
-        while sexo == 'm' or sexo == 'f' or sexo == 'M' or sexo == 'F':
+        while quantpessoas != 0:
 
-            altura = int(input())
+            sexo = input()
+            altura = int(input()) 
+
+            quantpessoas -= 1
 
             if altura > maiorAltura:
                 maiorAltura = altura
@@ -43,9 +97,7 @@ def main():
                 if sexo == 'f' or sexo == 'F':
                     fcount += 1
                     faltura += altura
-                    mediaAlturaMulheres = faltura / fcount
-            
-            sexo = input()
+                    mediaAlturaMulheres = faltura / fcount           
 
         # Saída
         print(f'MAIOR ALTURA DO GRUPO={maiorAltura}\nMENOR ALTURA DO GRUPO={menorAltura}')
