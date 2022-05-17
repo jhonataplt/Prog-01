@@ -1,5 +1,5 @@
 # Tem-se um conjunto de dados contendo a altura e o sexo 
-# (masculino, feminino) de 50 pessoas,
+# (masculino, feminino) de 50 pessoas.
 # Fazer um algoritmo que calcule e escreva: a maior e a menor 
 # altura do grupo, a média de altura das mulheres e o número de 
 # homens
@@ -19,34 +19,34 @@
 #         LITERAL
 #     menorAltura ← 10000
 #     maiorAltura ← -1
-#     LEIA sexo
-#     SE sexo ≠ "m" OU sexo ≠ "f"
+#     LEIA quantpessoas
+#     SE quantpessoas = 0
 #         ENTAO ESCREVA "NAO HÁ DADOS PARA PROCESSAR"
 #         SENAO
 #             REPITA
-#                 SE sexo = "m" OU sexo = "f"   
-#                     ENTAO
-#                         LEIA altura                       
-#                         SE altura > maiorAltura
-#                             ENTAO
-#                                 maiorAltura ← altura
-#                             SENÃO 
-#                                 SE altura < menorAltura
-#                                     menorAltura ← altura
-#                                 FIM SE
-#                         FIM SE          
-#                         SE sexo = "m"
-#                             ENTAO
-#                                 mcount ← mcount + 1
-#                             SENAO
-#                                 SE sexo = "f"
-#                                     fcount ← fcount + 1
-#                                     faltura ← faltura + altura
-#                                     mediaAlturaMulheres ← faltura / fcount
-#                                 FIM SE
-#                         FIM SE
-#                         LEIA sexo
-#                 FIM SE
+#                 ENQUANTO quantpessoas ≠ 0   
+#   	                LEIA sexo
+#                     LEIA altura        
+#                     quantpessoas ← quantpessoas - 1              
+#                     SE altura > maiorAltura
+#                         ENTAO
+#                             maiorAltura ← altura
+#                         SENÃO 
+#                             SE altura < menorAltura
+#                                 menorAltura ← altura
+#                             FIM SE
+#                     FIM SE          
+#                     SE sexo = "m"
+#                         ENTAO
+#                             mcount ← mcount + 1
+#                         SENAO
+#                             SE sexo = "f"
+#                                 fcount ← fcount + 1
+#                                 faltura ← faltura + altura
+#                                 mediaAlturaMulheres ← faltura / fcount
+#                             FIM SE
+#                     FIM SE
+#                     LEIA sexo
 #             FIM REPITA
 #             ESCREVA maiorAltura, menorAltura
 #             ESCREVA mediaAlturaMulheres
