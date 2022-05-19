@@ -23,37 +23,39 @@
 #     SE quantpessoas = 0
 #         ENTAO ESCREVA "NAO HÁ DADOS PARA PROCESSAR"
 #         SENAO
-#             REPITA
-#                 ENQUANTO quantpessoas ≠ 0   
-#   	                LEIA sexo
-#                     LEIA altura        
-#                     quantpessoas ← quantpessoas - 1              
-#                     SE altura > maiorAltura
-#                         ENTAO
-#                             maiorAltura ← altura
-#                         SENÃO 
-#                             SE altura < menorAltura
-#                                 menorAltura ← altura
-#                             FIM SE
-#                     FIM SE          
-#                     SE sexo = "m"
-#                         ENTAO
-#                             mcount ← mcount + 1
-#                         SENAO
-#                             SE sexo = "f"
-#                                 fcount ← fcount + 1
-#                                 faltura ← faltura + altura
-#                                 mediaAlturaMulheres ← faltura / fcount
-#                             FIM SE
-#                     FIM SE
-#                     LEIA sexo
-#             FIM REPITA
+#             ENQUANTO quantpessoas ≠ 0 FAÇA
+#                 LEIA sexo
+#                 LEIA altura        
+#                 quantpessoas ← quantpessoas - 1              
+#                 SE altura > maiorAltura
+#                     ENTAO
+#                         maiorAltura ← altura
+#                     SENÃO 
+#                         SE altura < menorAltura
+#                             menorAltura ← altura
+#                         FIM SE
+#                     FIM SENAO
+#                 FIM SE          
+#                 SE sexo = "m"
+#                     ENTAO
+#                         mcount ← mcount + 1
+#                     SENAO
+#                         SE sexo = "f"
+#                             fcount ← fcount + 1
+#                             faltura ← faltura + altura
+#                             mediaAlturaMulheres ← faltura / fcount
+#                         FIM SE
+#                     FIM SENAO
+#                 FIM SE
+#                 LEIA sexo
+#             FIM ENQUANTO
 #             ESCREVA maiorAltura, menorAltura
 #             ESCREVA mediaAlturaMulheres
 #             ESCREVA mcount
+#         FIM SENAO
+#     FIM SE
 # FIM ALGORITMO          
             
-
 def main():
 
     # Declaração de variáveis
