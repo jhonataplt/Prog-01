@@ -4,23 +4,33 @@
 # Resolver (no domínio dos números reais) a equação do 2° grau
 # se possível.
 
+import modulo;
+
 def main():
 
     # Declaração de variáveis
+    a = float(0.0)
+    b = float(0.0)
+    c = float(0.0)
+    delta = float(0.0)
+    # x1 = float(0.0)
+    # x2 = float(0.0)
 
+    # Entrada
     a = float(input())
     b = float(input())
     c = float(input())
 
-    # Processamento do delta
+    # Processamento
     if a != 0:
-        delta = (b ** 2) - 4 * a * c
+        delta = modulo.delta(a, b, c);
 
-        # Processamento de bhaskara + Saída
         if delta >= 0:
-            x1 = (-b + (delta ** 0.5)) / (2 * a)
-            x2 = (-b - (delta ** 0.5)) / (2 * a)
-            print("x1 = ", round(x1, 2), "\nx2 = ", round(x2, 2))
+            x1 = modulo.bhaskarax1(delta, a, b);
+            x2 = modulo.bhaskarax2(delta, a, b);
+
+            # Saída
+            print(f"x1 = {x1:.2f} \nx2 = {x2:.2f}")
         else:
             print("Não tem solução no domínio dos números reais.")
 
