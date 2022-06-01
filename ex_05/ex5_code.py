@@ -13,8 +13,7 @@ def main():
     b = float(0.0)
     c = float(0.0)
     delta = float(0.0)
-    # x1 = float(0.0)
-    # x2 = float(0.0)
+    resultado = []
 
     # Entrada
     a = float(input())
@@ -26,17 +25,15 @@ def main():
         delta = modulo.delta(a, b, c);
 
         if delta >= 0:
-            x1 = modulo.bhaskarax1(delta, a, b);
-            x2 = modulo.bhaskarax2(delta, a, b);
-
+            resultado = modulo.bhaskara(delta, a, b);
+            
             # Saída
-            print(f"x1 = {x1:.2f} \nx2 = {x2:.2f}")
+            print(f'x1 = {resultado[0]:.2f}\nx2 = {resultado[1]:.2f}')
         else:
             print("Não tem solução no domínio dos números reais.")
 
     else:
         print("Não é equação de segundo grau.")
-
 
 if __name__ == "__main__":
     main()
