@@ -3,38 +3,29 @@
 # pessoa, também, não poderá aposentar, caso não atenda aos 
 # requisitos.
 
+import modulo
+
 def main():
 
     # Declaração de variáveis
-    age = int(0);
-    contribution = int(0);
-    sum = int(0);
-    genre = str ('');
+    idade = int(0);
+    contribuicao = int(0);
+    sexo = str ('');
+    resultado = str ('a')
 
     # Entrada
-    genre = (input("Insert you genre: "));
-    age = int(input("Insert your age: "));
-    contribution = int(input("Insert your contribution time: "));
-    sum = age + contribution;
-
-    # Processamento + Saída
-    if genre == 'm':
-        if age >= 65:
-            if contribution >= 15:
-                if sum >= 95:
-                    print('Can retiree');
-                else: print("Can't retiree");
-            else: print("Can't retiree");
-        else: print("Can't retiree");
-
-    if genre == 'f':
-        if age >= 60:
-            if contribution >= 15:
-                if sum >= 85:
-                    print('Can retiree');
-                else: print("Can't retiree");
-            else: print("Can't retiree");
-        else: print("Can't retiree");
+    sexo = input("Insira seu sexo:");
+    idade = int(input("Insira sua idade: "));
+    contribuicao = int(input("Insira seu tempo de contribuição: "));
+    
+    # Processamento
+    if sexo == 'M' or sexo == 'm':
+        resultado = modulo.aposentadoriaHomem(idade, contribuicao);
+    elif sexo == 'F' or sexo == 'f':
+        resultado = modulo.aposentadoriaMulher(idade, contribuicao);
+    
+    # Saída
+    print(resultado)
 
 if __name__ == '__main__':
     main();
