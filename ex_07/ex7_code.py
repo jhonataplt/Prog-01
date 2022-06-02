@@ -6,6 +6,8 @@
 # encerra quando os três valores inteiros fornecidos pelo usuário 
 # forem todos iguais a zero.
 
+import modulo
+
 def main():
 
     # Declaração de variáveis
@@ -20,14 +22,7 @@ def main():
     c = int(input());
 
     # Processamento
-    if a > b:
-        if a > c:
-            maior = a;
-        else: maior = c;          
-    else:
-        if b > c:
-            maior = b;
-        else: maior = c;   
+    maior = modulo.maior(a, b, c) ; 
 
     while a != 0 or b != 0 or c != 0:
         
@@ -40,14 +35,7 @@ def main():
         c = int(input());
         
         # Processamento
-        if a > b:
-            if a > c:
-                maior = a;
-            else: maior = c;
-        else:
-            if b > c:
-                maior = b;
-            else: maior = c;
+        maior = modulo.maior(a, b, c);
                 
 if __name__ == "__main__":
     main()
