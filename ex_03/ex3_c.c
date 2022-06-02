@@ -21,5 +21,7 @@ int main()
         printf("%d IMPAR", num);
     }
     else
-        printf("%d PAR", num);
+        printf("%d PAR\n", num);
+
+    return 0;
 }
