@@ -1,66 +1,50 @@
 # Faça um programa em Python3 para resolver o seguinte 
 # problema: Deseja-se fazer um levantamento a respeito da 
 # ausência de alunos à primeira prova de Programação de 
-# Computadores para as N turmas de existentes no Ifes. O valor de 
+# Computadores para as N turmas existentes no Ifes. O valor de 
 # N é fornecido pelo usuário. O valor de N (quantidade de turmas) 
 # é o primeiro dado fornecido ao usuário.
+
+import modulo
 
 def main():
     
     # Declaração de variáveis
-    n = int(0)
-    ident = str('')
-    quant = int(0)
-    mat = str('')
-    freq = str('')
-    freqPerc = float(0.0)
-    maiorPerc = float(0.0)
-    menorPerc = float(0.0)
-    turmaMaiorPerc = float(0.0)
-    turmaMenorPerc = float(0.0)
-    countAus = int(0)
-    ausAcima = int(0)
-    i = int(0)
-    j = int(0)
+    numeroTurmas = int(0);
+    identificacaoTurma = str('');
+    quantidadeAlunos = int(0);
+    porcentagemFrequencia = float(0.0);
+    maiorFrequencia = float(0.0);
+    menorFrequencia = float(0.0);
+    turmaMaiorFrequencia = float(0.0);
+    turmaMenorFrequencia = float(0.0);
+    contadorAusencia = int(0);
+    turmasAusentes = int(0);
    
+    # Entrada
+    numeroTurmas = int(input());
+
     # Inicialização de variáveis
-    n = int(input())
-    maiorPerc = -1
-    menorPerc = 101
+    maiorFrequencia = -1;
+    menorFrequencia = 101;
     
     # Entrada + Processamento
-    for i in range(n):
-        ident = input()
-        quant = int(input())
-        countAus = 0
+    for i in range(numeroTurmas):
+        identificacaoTurma = input();
+        quantidadeAlunos = int(input());
+        contadorAusencia = 0;
        
-        for j in range(quant):
-            mat = input()
-            freq = input()
-            
-            if freq == 'A':
-                countAus += 1
+        contadorAusencia = modulo.contadorFrequencia(quantidadeAlunos, contadorAusencia);
         
-        freqPerc = countAus / quant * 100
+        porcentagemFrequencia = contadorAusencia / quantidadeAlunos * 100
        
-        if freqPerc > maiorPerc:
-            maiorPerc = freqPerc
-            turmaMaiorPerc = ident
-       
-        if freqPerc < menorPerc:
-            menorPerc = freqPerc
-            turmaMenorPerc = ident
-       
-        if freqPerc > 20:
-            ausAcima += 1
+        maiorFrequencia, turmaMaiorFrequencia, menorFrequencia, turmaMenorFrequencia, turmasAusentes = modulo.separadorFrequencia(
+            porcentagemFrequencia, maiorFrequencia, turmaMaiorFrequencia, menorFrequencia, turmaMenorFrequencia, identificacaoTurma, turmasAusentes)
     
         # Saída
-        print(f'TURMA={ident} AUSENCIA={freqPerc:.2f}%')
-    print(
-        f'TURMA COM MAIOR PORCENTAGEM DE AUSENCIA={turmaMaiorPerc} AUSENCIA={maiorPerc:.2f}%')
-    print(
-        f'TURMA COM MENOR PORCENTAGEM DE AUSENCIA={turmaMenorPerc} AUSENCIA={menorPerc:.2f}%')
-    print(f'{ausAcima} TURMAS COM PORCENTAGEM DE AUSENCIA SUPERIOR A 20%')
+        print(f'TURMA={identificacaoTurma} AUSENCIA={porcentagemFrequencia:.2f}%')
+
+    modulo.saida(turmaMaiorFrequencia, maiorFrequencia, turmaMenorFrequencia, menorFrequencia, turmasAusentes)
     
 if __name__ == '__main__':
     main()
