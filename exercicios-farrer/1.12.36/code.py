@@ -1,9 +1,11 @@
 def main():
-    denominador = int(1);
+    resultadoParcial = float(0.0)
+    fatorial = int(0)
     numerador = int(0)
+    denominador = int(1);
     contadorTermos = int(0)
     resultado = int(0)
-    fatorial = int(0)
+
     numerador = 63
     resultadoParcial = numerador/denominador
 
