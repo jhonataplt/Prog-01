@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-#  20221bsi0080Q2.py
-#  
-#  Copyright 2022
-#  Jhonata Polito Demuner
-#  20221bsi0080
-
 # Faça um programa em Python3 que:
 # a) Calcule o somatório dos n primeiros termos da série definida por:
 # S=1/1^3-1/3^3+1/5^3-1/7^3+1/9^3-...
