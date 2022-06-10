@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-#  code.py
-#  
-#  Copyright 2022
-#  Jhonata Polito Demuner
-#  20221bsi0080
-
 # Faça um programa em Python3 para resolver o seguinte problema:
 # - Programa que leia diversos números inteiros maiores ou iguais a
 # zero na base 10, calcule e imprima o equivalente deste número na
