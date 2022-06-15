@@ -8,7 +8,7 @@ def calcNumeroPrimo(num):
     if num != 1:
         possiveisDivisores = 0;
         
-        for i in range(1, 200):
+        for i in range(1, num + 1):
             if num % i == 0:
                 possiveisDivisores += 1;
         if possiveisDivisores == 2:
