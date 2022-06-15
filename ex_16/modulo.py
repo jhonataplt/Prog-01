@@ -1,4 +1,6 @@
-def calcTermos (numerador, denominador, n):
+def calcTermos (n):
+    denominador = int(1)
+    numerador = int(1)
     s = int(0)
     
     for i in range(n, 0, -1):
