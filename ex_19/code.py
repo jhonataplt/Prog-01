@@ -40,7 +40,7 @@ def main():
             print(f'{num} NAO EH PRIMO');
 
         num = int(input());
-        
+
     print(f'SOMA = {soma}\nPRODUTO = {produto}')
 
 if __name__ == '__main__':

@@ -1,9 +1,6 @@
 def calcNumeroPrimo(num):
 
-    resultado = bool;
     possiveisDivisores = int(0);
-
-    resultado = False;
 
     if num != 1:
         possiveisDivisores = 0;
@@ -11,7 +8,5 @@ def calcNumeroPrimo(num):
         for i in range(1, num + 1):
             if num % i == 0:
                 possiveisDivisores += 1;
-        if possiveisDivisores == 2:
-            resultado = True;
             
-    return resultado;
+    return True if possiveisDivisores == 2 else False;
